@@ -1,0 +1,225 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+@font-face {
+    font-family: "Century Schoolbook Roman";
+    src: url("/fonts/bitstream-centschbookbtroman.ttf");
+}
+
+@font-face {
+    font-family: "Century Schoolbook Bold Condensed";
+    src: url("/fonts/CenturySchoolbookBoldCondensedBT.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+$main-font: "Century Schoolbook Roman", serif;
+$title-font: "Century Schoolbook Bold Condensed", serif;
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-image: url("/images/media/pbc_bg3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.menu-bar {
+    width: 100%;
+    height: 92px;
+    background-color: #222;
+    & .menu-bar-inner {
+        display: block;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1180px;
+    }
+}
+.page-width {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.section-block {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    margin-left: 0px !important;
+    margin-top: 40px !important;
+    padding: 40px 80px;
+    background-color: #fff;
+}
+
+h1.section-header__title {
+    font-size: 35px !important;
+    line-height: 42px !important;
+    font-family: $main-font;
+    font-weight: 700;
+}
+
+h3 {
+    color: #333;
+    font-weight: 300;
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-family: $title-font;
+}
+
+p {
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.375;
+}
+
+p.folder-item {
+    background-color: hsl(0, 0%, 27%);
+    padding: 10px;
+    font-family: $title-font;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+div.asset-item {
+    background-color: hsl(0, 0%, 50%);
+    padding: 0 1rem 0 0;
+    margin-bottom: 0.5rem;
+    font-family: $title-font;
+    color: #fff !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #d6d8da;
+    & a {
+        color: #fff !important;
+        font-family: $title-font;
+        text-transform: uppercase;
+    }
+    & .dl-button {
+        padding: 4px 10px;
+        border-radius: 5px;
+        font-family: "Open Sans", sans-serif !important;
+        background-color: #f7933d;
+        color: #fff;
+        font-size: 0.95rem;
+        transition: 0.6s background-color;
+        text-transform: capitalize;
+        &:hover {
+            text-decoration: none;
+            background-color: #d85e0d;
+        }
+    }
+}
+
+.asset-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $title-font;
+}
+
+.asset-thumb {
+    margin-right: 1rem;
+    img {
+        width: 100%;
+        height: 75px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}
+
+.resource-grid {
+    padding: 2.5rem 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 0.5rem;
+    max-width: 80rem;
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+}
+
+.gallery-overlay-title {
+    font-weight: 800;
+    color: #f7933d;
+    cursor: pointer;
+}
+
+@media (min-width: 776px) {
+    .gallery {
+        grid-gap: 1rem;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+}
+
+.gallery-thumb {
+    width: 100%;
+    height: 22vw;
+    object-fit: cover;
+    border-radius: 0.875rem;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+}
+
+.gallery-thumb-overlay {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: relative;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-thumb-overlay-btns {
+    position: relative;
+    bottom: 50%;
+    left: 50%;
+}
+
+.gallery-panel:hover .gallery-thumb {
+    opacity: 0.8;
+}
+
+.gallery-panel:hover .gallery-thumb-overlay {
+    opacity: 1;
+}
+
+.paginate-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.paginate-links li {
+    cursor: pointer;
+}
+
+.paginate-links li a {
+    cursor: pointer;
+    color: #ff8200 !important;
+    font-weight: bold;
+}

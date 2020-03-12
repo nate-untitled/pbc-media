@@ -1,0 +1,24 @@
+html {
+  background-image: url('/images/media/pbc_bg3.png');
+  //background-size: cover;
+  //background-position: center;
+  background-repeat: no-repeat;
+}
+
+.media-lib {
+  margin-top: 80px;
+  & .media-manager__toolbar, .__stack-breadcrumb {
+    background-color: #222222;
+    color: #fff;
+  }
+  & .button.is-link {
+    background-color: $orange;
+  }
+  & .is-folder {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent), linear-gradient(45deg, $orange 0, $orange 100%) !important;
+    background-size: 40px 40px, 100% 100% !important;
+  }
+  & .has-text-link {
+    color: $orange !important;
+  }
+}
